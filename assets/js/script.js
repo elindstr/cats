@@ -82,13 +82,23 @@ function generate () {
     img.src = "assets/media/" + catBreedDict[n].file
     img.alt = `image of a ${catBreedDict[n].name}`
     document.querySelector("figure").appendChild(img);
-
-    document.querySelector("figure").addEventListener('click', function() {
-        document.querySelector("h2").textContent = catBreedDict[n].name
-        document.querySelector("figcaption").textContent = catBreedDict[n].description
-    })
 }
 
+//handle button
+var catHidden = true
+document.querySelector("button").addEventListener('click', function() {
+    if (catHidden == true) {
+        document.querySelector("h2").textContent = catBreedDict[n].name
+        document.querySelector("figcaption").textContent = catBreedDict[n].description
+        document.querySelector("button").innerText = "Another?"
+        catHidden = false
+    }
+    else {
+        document.querySelector("button").innerText = "Reveal?"
+        catHidden = true
+        generate()
+    }
+})
 generate()
 
 
