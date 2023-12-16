@@ -72,7 +72,7 @@ function generate () {
     img.alt = `image of a ${catBreedDict[n].name}`
     document.querySelector("figure").appendChild(img);
 
-    document.querySelector("h2").textContent = "Who's the cat?!"
+    document.querySelector("h2").textContent = "Who's that cat?!"
 
     document.querySelector("figure").addEventListener('click', function() {
         document.querySelector("h2").textContent = catBreedDict[n].name
