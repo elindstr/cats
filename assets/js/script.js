@@ -1,3 +1,4 @@
+//ChatGPT-generated list
 let catBreedDict = [
     { name: "Abyssinian", file: "Abyssinian.jpeg", description: "An active, playful breed known for its striking, ticked coat." },
     { name: "American Bobtail", file: "AmericanBobtail.jpeg", description: "Features a short, bobbed tail and a playful, friendly temperament." },
@@ -59,7 +60,7 @@ function getRandomInt(min, max) {
 }
 
 function generate () {
-    //clear
+    //clear old
     const figure = document.querySelector("figure");
     while (figure.firstChild) {
         figure.removeChild(figure.firstChild);
@@ -67,7 +68,7 @@ function generate () {
     document.querySelector("h2").textContent = ""
     document.querySelector("figcaption").textContent = "" 
 
-    //new
+    //create new
     n = getRandomInt(0, catBreedDict.length)
     var img = document.createElement('img');
     img.src = "assets/media/" + catBreedDict[n].file
