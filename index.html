@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Image</title>
+    <script>
+        function loadRandomImage() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response = JSON.parse(this.responseText);
+                    if (response.image) {
+                        document.getElementById("randomImage").src = response.image;
+                    } else {
+                        alert("No images found.");
+                    }
+                }
+            };
+            xhr.open("GET", "random_image.php", true);
+            xhr.send();
+        }
+    </script>
+</head>
+<body onload="loadRandomImage()">
+    <img id="randomImage" src="" alt="Random Image">
+</body>
+</html>
