@@ -64,6 +64,8 @@ function generate () {
     while (figure.firstChild) {
         figure.removeChild(figure.firstChild);
     }
+    document.querySelector("h2").textContent = ""
+    document.querySelector("figcaption").textContent = "" 
 
     //new
     n = getRandomInt(0, catBreedDict.length)

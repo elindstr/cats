@@ -18,15 +18,8 @@ main {
   flex-direction: column;
   align-items: center;
 }
-button {
-  position: absolute;
-  top: 10px;
-  left: 10px; 
-  font-size: 1.5em;
-  font-family: cursive;
-}
 h2 {
-  margin-top: 50px;
+  margin-top: 5px;
   font-size: 2.5em;
   padding: 0;
   margin-bottom: 10px;
@@ -46,4 +39,65 @@ figure {
 figcaption {
   font-size: 1.8em;
   text-align: center;
+  margin: 0 40px 0 40px;
+}
+button {
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-family: cursive;
+}
+
+:root {
+  --cat-size: 2em
+}
+#cat1 {
+  font-size: var(--cat-size);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+}
+#cat2 {
+  font-size: var(--cat-size);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#cat3 {
+  font-size: var(--cat-size);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+}
+#cat4 {
+  font-size: var(--cat-size);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+#cat5 {
+  font-size: var(--cat-size);
+  position: absolute;
+  top: 30%;
+  left: 10px;
+
+}
+#cat6 {
+  font-size: var(--cat-size);
+  position: absolute;
+  top: 30%;
+  right: 10px;
+}
+#cat7 {
+  font-size: var(--cat-size);
+  position: absolute;
+  top: 60%;
+  left: 10px;
+}
+#cat8 {
+  font-size: var(--cat-size);
+  position: absolute;
+  top: 60%;
+  right: 10px;
 }
