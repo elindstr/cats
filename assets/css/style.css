@@ -81,14 +81,14 @@ button {
 #cat5 {
   font-size: var(--cat-size);
   position: absolute;
-  top: 30%;
+  top: 28%;
   left: 10px;
 
 }
 #cat6 {
   font-size: var(--cat-size);
   position: absolute;
-  top: 30%;
+  top: 28%;
   right: 10px;
 }
 #cat7 {
