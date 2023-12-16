@@ -42,5 +42,8 @@ img {
 }
 figure {
   width: 100%;
-  font-size: 2.5em;
+}
+figcaption {
+  font-size: 1.8em;
+  text-align: center;
 }
