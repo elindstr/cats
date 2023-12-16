@@ -61,21 +61,27 @@ function getRandomInt(min, max) {
 
 function generate () {
     //clear old
+    const header = document.querySelector("header");
+    while (header.firstChild) {
+        header.removeChild(header.firstChild);
+    }
     const figure = document.querySelector("figure");
     while (figure.firstChild) {
         figure.removeChild(figure.firstChild);
     }
-    document.querySelector("h2").textContent = ""
     document.querySelector("figcaption").textContent = "" 
 
     //create new
     n = getRandomInt(0, catBreedDict.length)
+
+    var h2 = document.createElement('h2');
+    h2.textContent= "Who's that cat?!"
+    document.querySelector("header").appendChild(h2);
+
     var img = document.createElement('img');
     img.src = "assets/media/" + catBreedDict[n].file
     img.alt = `image of a ${catBreedDict[n].name}`
     document.querySelector("figure").appendChild(img);
-
-    document.querySelector("h2").textContent = "Who's that cat?!"
 
     document.querySelector("figure").addEventListener('click', function() {
         document.querySelector("h2").textContent = catBreedDict[n].name
